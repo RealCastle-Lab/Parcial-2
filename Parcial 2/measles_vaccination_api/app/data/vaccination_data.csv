@@ -1,0 +1,8 @@
+# app/data_loader.py
+import pandas as pd
+
+def load_vaccination_data():
+    data = pd.read_csv('app/data/vaccination_data.csv')
+    return data.to_dict(orient='records')  # Convertir DataFrame a una lista de diccionarios
+
+# Puedes importar y llamar a esta función en __init__.py o donde mejor consideres para tu flujo de trabajo
